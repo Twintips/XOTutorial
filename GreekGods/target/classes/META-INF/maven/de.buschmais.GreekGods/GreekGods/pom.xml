@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.buschmais.GreekGods</groupId>
+  <artifactId>GreekGods</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <properties>
+  	<xo.version>0.8.1</xo.version>
+  </properties>
+  
+  <dependencies>
+		<dependency>
+			<groupId>org.neo4j</groupId>
+			<artifactId>neo4j</artifactId>
+			<version>3.2.3</version>
+		</dependency>
+		<!-- tag::Dependencies[] -->
+		<dependency>
+			<!-- For using an remote Neo4j instance -->
+			<groupId>com.buschmais.xo</groupId>
+			<artifactId>xo.neo4j.remote</artifactId>
+			<version>${xo.version}</version>
+		</dependency>
+		<dependency>
+			<!-- The XO API -->
+			<groupId>com.buschmais.xo</groupId>
+			<artifactId>xo.api</artifactId>
+			<version>${xo.version}</version>
+		</dependency>
+		<dependency>
+			<!-- The XO runtime implementation -->
+			<groupId>com.buschmais.xo</groupId>
+			<artifactId>xo.impl</artifactId>
+			<version>${xo.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+	
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
